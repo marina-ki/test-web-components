@@ -13,41 +13,7 @@
   <user-agent></user-agent>
   <!-- <user-agnet>：カスタム要素 -->
   <!-- カスタム要素名にはダッシュ（-）を含める必要があるので注意 -->
-  <template id="popup-tmpl">
-    <!-- <template>タグで囲われた要素はレンダリングされない -->
-    <!-- <style>要素も処理されず、あとでShadow DOM内でレンダリングするときに有効となる -->
-    <!-- Shadow DOM内でのレンダリングはShadow DOM内に閉じるので、<template>タグの外には影響しない -->
-    <style>
-      #popup {
-        display: none;
-        position: fixed;
-        background-color: rgba(0,0,0,0.3);
-        width: 100vw;
-        height: 100vh;
-        top: 0;
-        left: 0;
-      }
-      .dialog {
-        background-color: white;
-        width: 80vw;
-        margin: 100px auto 0 auto;
-        padding: 10px;
-        border-radius: 5px;
-      }
-      .title { font-weight: bold; }
-    </style>
-    <div id="popup">
-      <div class="dialog">
-        <div class="title">
-          <slot name="title"></slot>
-        </div>
-        <div class="content">
-          <slot name="content"></slot>
-        </div>
-      </div>
-    </div>
-  </template>
-
+  
   <div>
     <p class="title">ポップアップ - 1</p>
     <popup-elememt>
